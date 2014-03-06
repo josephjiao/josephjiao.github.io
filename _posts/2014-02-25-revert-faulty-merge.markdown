@@ -11,7 +11,7 @@ image: git.jpg
 categories: 技术 
 ---
 
-
+## 问题的起源
 在实际工作中，创建一个topic分支进行开发之后, 进行了merge操作，之后发现
 merge操作失误了，想要重做merge。此时，简单的认为revert 这个merge操作后，
 再次merge就可以解决问题了。
@@ -40,8 +40,8 @@ merge操作失误了，想要重做merge。此时，简单的认为revert 这个
 用git文档的说法就是：”git revert“仅仅是进行了简单的**data**的revert而没有进行**repository history**的revert。
 
 
-怎么解决这个问题呢?
-----
+##怎么解决这个问题呢?
+
 
 
 在我们这里，其实简单重写整个topic分支，人为的让git以为这是和原来topic分支毫无关系的一个分支，就可以了。
@@ -76,10 +76,9 @@ merge，又应该怎么办呢？
 原因自然还是那句：”git revert“仅仅是进行了简单的**data**的revert而没有
 进行**repository history**的revert。
 
-两种解决方法
-----
+##两种解决方法
 
-- 进行一次revert的revert
+### 进行一次revert的revert
 
 如下图
 
@@ -89,7 +88,7 @@ merge，又应该怎么办呢？
  
  此处的Y点就是 git revert W产生的
 
-- 放弃原有分支，重新建立新的分支。
+### 放弃原有分支，重新建立新的分支。
 
 这个没有什么特殊的，就是简单的rebase + merge的操作了。
 

@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<div class="content">    
-	<div class="span9 columns">    
-	{% include post_header.html %}
-    {{ content }}		
+<div class="content " >    
+    <div class="row entry" id="content">
+        <div class="span9 columns ">    
+        {% include post_header.html %}
+        {{ content }}		
+        </div>
     </div>
 </div>
     
 
-<div class="row">
+<div class="row" >
 	<div class="span9 columns">    
 		<h2>Comments Section</h2>
 	    <p>Feel free to comment on the post but keep it clean and on topic.</p>	
@@ -32,3 +34,4 @@ layout: default
 		<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 	</div>
 </div>
+
